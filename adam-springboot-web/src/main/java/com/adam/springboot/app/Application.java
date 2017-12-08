@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 /**
  * Created by Think on 2017/12/4.
  */
-@ComponentScan(basePackages = {"com.adam.springboot.controller"})
+@ComponentScan(basePackages = {"com.adam.springboot.controller", "com.adam.springboot.service"})
 @EnableAutoConfiguration
 @EnableConfigurationProperties
 @SpringBootApplication

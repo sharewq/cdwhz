@@ -19,11 +19,46 @@
     </modules>
 
 
-    <!--jar-包的引用-->
+    <!-- 多环境开发配置（dev:开发，test:测试，prod:正式） -->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profiles.active>dev</profiles.active>
+                <virtual.directory>adam-dev</virtual.directory>
+                <log4jLevel>DEBUG</log4jLevel>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <profiles.active>test</profiles.active>
+                <virtual.directory>adam-test</virtual.directory>
+                <log4jLevel>INFO</log4jLevel>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <profiles.active>prod</profiles.active>
+                <virtual.directory>adam-test</virtual.directory>
+                <log4jLevel>INFO</log4jLevel>
+            </properties>
+        </profile>
+    </profiles>
+
+    <!-- 运行环境基本配置 -->
     <properties>
         <java.jdk.version>1.8</java.jdk.version>
         <spring.boot.version>1.5.3.RELEASE</spring.boot.version>
-    </properties>
+        <spring.loaded.version>1.2.6.RELEASE</spring.loaded.version>
+        <maven.jar.plugin>3.0.2</maven.jar.plugin>
+        <maven.surefire.plugin>2.20</maven.surefire.plugin>
 
+
+    </properties>
 
 </project>

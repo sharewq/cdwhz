@@ -38,13 +38,13 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.chinapopin.cdwhz.bean"
+        <javaModelGenerator targetPackage="com.adam.springboot.dao"
                             targetProject="../src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.chinapopin.cdwhz.dao"
+        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.adam.springboot.bean"
                              targetProject="../src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
